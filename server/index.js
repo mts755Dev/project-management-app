@@ -6,7 +6,7 @@ import { connectDB } from "./config/db.js";
 import schema from "./schema/schema.js";
 import { graphqlHTTP } from "express-graphql";
 
-dotenv.config()
+dotenv.config();
 
 const port = process.env.PORT;
 const app = express();
