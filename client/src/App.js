@@ -4,6 +4,7 @@ import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
 import Home from './pages/Home';
 import Project from './pages/Project';
 import NotFound from './pages/NotFound';
+import env from "react-dotenv";
 
 const cache = new InMemoryCache({
   typePolicies: {
@@ -25,7 +26,7 @@ const cache = new InMemoryCache({
 });
 
 const client = new ApolloClient({
-  uri: 'http://localhost:5000/graphql',
+  uri: env.SERVER_URI,
   cache,
 });
 
